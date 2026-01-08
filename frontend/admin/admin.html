@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel – Manage Books</title>
+
+  <!-- IMPORTANT: CSS path -->
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<header class="admin-header">
+  <h1>📚 Admin Panel</h1>
+</header>
+
+<main class="admin-container">
+
+  <!-- ADD BOOK -->
+  <section class="card">
+    <h2>Add Book</h2>
+    <input id="title" placeholder="Title">
+    <input id="description" placeholder="Description">
+    <input id="price" type="number" placeholder="Price">
+    <input id="image" placeholder="Image URL">
+    <button onclick="addBook()">Add Book</button>
+  </section>
+
+  <!-- EDIT BOOK -->
+  <section class="card">
+    <h2>Edit Book</h2>
+    <input type="hidden" id="editId">
+    <input id="editTitle" placeholder="Title">
+    <input id="editDescription" placeholder="Description">
+    <input id="editPrice" type="number" placeholder="Price">
+    <input id="editImage" placeholder="Image URL">
+    <button onclick="updateBook()">Update Book</button>
+  </section>
+
+  <!-- BOOK LIST -->
+  <section class="card">
+    <h2>All Books</h2>
+    <div id="adminBooks"></div>
+  </section>
+
+</main>
+
+<script src="admin.js"></script>
+</body>
+</html>

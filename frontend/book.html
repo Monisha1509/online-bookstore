@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Details</title>
+   <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">📚 BookStore</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="cart.html">Cart</a>
+  </nav>
+</header>
+
+<section class="container">
+  <div id="bookDetails" class="book-details"></div>
+</section>
+
+<!-- ✅ SINGLE FOOTER (KEEP THIS ONLY) -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-center">
+      <h3>📚 Online Bookstore</h3>
+      <p>Your one-stop shop for books that inspire, teach, and entertain.</p>
+
+      <!-- SOCIAL MEDIA -->
+      <div class="footer-social">
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+      <a href="checkout.html">Checkout</a>
+    </div>
+
+    <div class="footer-right">
+      <h4>Contact</h4>
+      <p>Email: support@onlinebookstore.com</p>
+      <p>Phone: +91 98765 43210</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Online Bookstore. All rights reserved.
+  </div>
+</footer>
+
+
+<script>
+let currentBook = null;
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+const container = document.getElementById("bookDetails");
+
+fetch(`http://localhost:5000/api/books/${id}`)
+  .then(res => res.json())
+  .then(book => {
+    currentBook = book;
+
+    container.innerHTML = `
+      <img src="${book.image}">
+      <div>
+        <h2>${book.title}</h2>
+        <p>${book.description}</p>
+        <h3>₹${book.price}</h3>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+    `;
+  });
+
+function addToCart() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push(currentBook);   // ✅ FULL OBJECT
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Added to cart");
+}
+</script>
+
+
+
+</body>
+</html>

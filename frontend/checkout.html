@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Checkout</title>
+   <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="header">
+  <h1>Checkout</h1>
+  <a href="cart.html" class="cart-link">⬅ Back to Cart</a>
+</header>
+
+<main class="container checkout-container">
+
+  <!-- LEFT: ADDRESS FORM -->
+  <section class="checkout-form">
+    <h2>Shipping Details</h2>
+
+    <form id="checkoutForm">
+      <label>Full Name</label>
+      <input type="text" required />
+
+      <label>Email</label>
+      <input type="email" required />
+
+      <label>Phone</label>
+      <input type="tel" required />
+
+      <label>Address</label>
+      <textarea rows="3" required></textarea>
+
+      <label>City</label>
+      <input type="text" required />
+
+      <label>Pincode</label>
+      <input type="text" required />
+
+      <button type="submit">Place Order</button>
+    </form>
+  </section>
+
+  <!-- RIGHT: ORDER SUMMARY -->
+  <section class="order-summary">
+    <h2>Order Summary</h2>
+    <div id="summaryItems"></div>
+    <hr />
+    <h3 id="summaryTotal"></h3>
+  </section>
+
+</main>
+<!-- ✅ SINGLE FOOTER (KEEP THIS ONLY) -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-center">
+      <h3>📚 Online Bookstore</h3>
+      <p>Your one-stop shop for books that inspire, teach, and entertain.</p>
+
+      <!-- SOCIAL MEDIA -->
+      <div class="footer-social">
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+      <a href="checkout.html">Checkout</a>
+    </div>
+
+    <div class="footer-right">
+      <h4>Contact</h4>
+      <p>Email: support@onlinebookstore.com</p>
+      <p>Phone: +91 98765 43210</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Online Bookstore. All rights reserved.
+  </div>
+</footer>
+
+
+<script src="js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+}
+
+/* HEADER */
+.header {
+  background: #111827;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* ORDER CARD */
+.order-card {
+  background: white;
+  margin: 30px auto;
+  padding: 24px 30px;
+  border-radius: 14px;
+  max-width: 900px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* CUSTOMER INFO */
+.customer-info p {
+  margin: 6px 0;
+  color: #374151;
+  font-size: 15px;
+}
+
+.customer-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* BOOK LIST */
+.book-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed #e5e7eb;
+  font-size: 15px;
+}
+
+.book-item:last-child {
+  border-bottom: none;
+}
+
+.book-title {
+  color: #1f2937;
+}
+
+.book-price {
+  font-weight: 600;
+  color: #059669;
+}
+
+/* TOTAL */
+.total {
+  text-align: right;
+  font-size: 20px;
+  font-weight: 700;
+  color: #047857;
+  margin-top: 16px;
+}
+
+/* ICONS */
+.icon {
+  color: #9ca3af;
+  margin-right: 6px;
+}
+/* FORCE TEXT VISIBILITY */
+.order-card,
+.order-card p,
+.order-card span,
+.order-card div {
+  color: #1f2937 !important; /* dark gray */
+  opacity: 1 !important;
+}
+/* ===== FIX WHITE TEXT ISSUE ===== */
+
+.order-card {
+  background: #ffffff;
+  color: #1f2937;
+  padding: 24px 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Customer info */
+.order-card h3,
+.order-card p,
+.order-card span,
+.order-card div {
+  color: #1f2937 !important;
+  opacity: 1 !important;
+}
+
+/* Book list */
+.book-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+.book-item span {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* Total price */
+.total {
+  margin-top: 16px;
+  text-align: right;
+  font-size: 20px;
+  font-weight: 700;
+  color: #059669;
+}
